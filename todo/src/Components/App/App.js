@@ -7,7 +7,7 @@ const App = () => {
 
     const items = [
         {value: 'Написать новое приложение'},
-        {value: 'Выучить React'},
+        {value: 'Выучить  понять React'},
         {value: 'Найти работу'}
     ];
 
