@@ -1,0 +1,24 @@
+@font-face{
+
+    font-family: 'Source Sans Pro';
+
+    src: url('./Fonts/SourceSansPro-Black.ttf');
+
+    src: url('./Fonts/SourceSansPro-Bold.ttf');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+.wrap {
+    font-family: 'Source Sans Pro';
+    margin: auto;
+    width: 400px;
+
+}
+
+.title {
+    color: pink;
+}
