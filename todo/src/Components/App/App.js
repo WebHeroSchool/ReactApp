@@ -1,7 +1,7 @@
 import React from 'react';
 import ItemList from '../ItemList/ItemList'
 import Footer from  '../Footer/Footer'
-import Item from "../Item/Item";
+import InputItem from "../InputItem/InputItem";
 import styles from './App.module.css';
 import classnames from 'classnames';
 
@@ -16,6 +16,7 @@ const App = () => {
 
    return ( <div className={styles.wrap}>
         <h1 className={styles.title}>Hello!</h1>
+        <InputItem />
         <ItemList items = {items}/>
         <Footer count = {1} />
     </div>);
