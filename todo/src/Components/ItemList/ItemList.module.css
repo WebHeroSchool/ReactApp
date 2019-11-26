@@ -1,0 +1,40 @@
+.items {
+    margin: 5px 0 0 0;
+    font-size: 30px;
+    list-style: none;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+
+}
+
+.items::after {
+    content: '';
+    background: url(./Image/delete.svg) no-repeat center;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 15px;
+    top: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.items:hover:after {
+    padding: 1px;
+}
+
+@media (max-width: 670px) {
+    .items {
+        font-size: 25px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .items {
+        font-size: 20px;
+        line-height: 40px;
+    }
+}
+

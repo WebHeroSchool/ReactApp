@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemList from '../ItemList/ItemList'
+import ItemList from '../ItemList/ItemList';
 import Footer from  '../Footer/Footer'
 import InputItem from "../InputItem/InputItem";
 import styles from './App.module.css';
@@ -9,16 +9,27 @@ import classnames from 'classnames';
 const App = () => {
 
     const items = [
-        {value: 'Начать изучать React', isDone: true},
-        {value: 'Попробовать написать первое приложение', isDone: true},
-        {value: 'Дойти до финальной работы', isDone: false}
+        {value: 'Learn from the React module', isDone: true},
+        {value: 'Hug cat', isDone: true},
+        {value: 'To drink tea!', isDone: false}
     ];
 
-   return ( <div className={styles.wrap}>
-        <h1 className={styles.title}>Hello!</h1>
-        <InputItem />
-        <ItemList items = {items}/>
-        <Footer count = {1} />
-    </div>);
-}
+   return (
+        <html>
+            <body className={styles.body}>
+                <span className={styles.title}>Todo</span>
+                <div className={styles.wrap}>
+                    <InputItem />
+                    <ItemList items = {items}/>
+                    <div className={styles.button_wrap}>
+                        <button className={styles.allTasks + ' ' + styles.button}>All Tasks: {3}</button>
+                        <button className={styles.incomplete + ' ' + styles.button}>Incomplete: {1}</button>
+                        <button className={styles.complete + ' ' + styles.button}>Complete: {2}</button>
+                    </div>
+                </div>
+            </body>
+        </html>
+        );
+};
+
 export default App;

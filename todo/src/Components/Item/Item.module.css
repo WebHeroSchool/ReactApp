@@ -1,8 +1,9 @@
 .item {
-    color: #A64542;
+    color: #3f51b5;
+    margin: 0 0 0 15px;
 }
 
 .done {
-    text-decoration: line-through;
-    color: #BFA3A2;
+   opacity: .7;
+    color: slategrey;
 }
