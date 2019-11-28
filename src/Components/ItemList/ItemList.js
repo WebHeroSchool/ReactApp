@@ -5,8 +5,9 @@ import styles from './ItemList.module.css'
 
 
 
-const ItemList = ({ items }) => (<nav><ul>
-    {items.map( item =>  <li key ={item.value} className={styles.items}><Item value = { item.value } isDone ={ item.isDone } /></li>)}
+const ItemList = ({ items, onClickDone }) => (<nav><ul>
+    {items.map( item =>  <li key ={item.value} className={styles.items}>
+        <Item value = { item.value } isDone ={ item.isDone } onClickDone={onClickDone}/></li>)}
 </ul></nav>);
 
 

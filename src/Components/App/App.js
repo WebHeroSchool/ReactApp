@@ -14,15 +14,16 @@ class App extends React.Component {
         ]
     };
 
-    render() {
+    onClickDone = isDone => console.log(isDone);
 
+    render() {
         return (
             <html>
             <body className={styles.body}>
             <span className={styles.title}>Todo</span>
             <div className={styles.wrap}>
                 <InputItem />
-                <ItemList items = {this.state.items}/>
+                <ItemList items = {this.state.items} onClickDone={this.onClickDone} />
                 <div className={styles.button_wrap}>
                     <button className={styles.allTasks + ' ' + styles.button}>All Tasks: {3}</button>
                     <button className={styles.incomplete + ' ' + styles.button}>Incomplete: {1}</button>
