@@ -5,31 +5,31 @@ import InputItem from "../InputItem/InputItem";
 import styles from './App.module.css';
 import classnames from 'classnames';
 
+class App extends React.Component {
+    render () {
+        const items = [
+            {value: 'Learn from the React module', isDone: true},
+            {value: 'Hug cat', isDone: true},
+            {value: 'To drink tea!', isDone: false}
+        ];
 
-const App = () => {
-
-    const items = [
-        {value: 'Learn from the React module', isDone: true},
-        {value: 'Hug cat', isDone: true},
-        {value: 'To drink tea!', isDone: false}
-    ];
-
-   return (
-        <html>
+        return (
+            <html>
             <body className={styles.body}>
-                <span className={styles.title}>Todo</span>
-                <div className={styles.wrap}>
-                    <InputItem />
-                    <ItemList items = {items}/>
-                    <div className={styles.button_wrap}>
-                        <button className={styles.allTasks + ' ' + styles.button}>All Tasks: {3}</button>
-                        <button className={styles.incomplete + ' ' + styles.button}>Incomplete: {1}</button>
-                        <button className={styles.complete + ' ' + styles.button}>Complete: {2}</button>
-                    </div>
+            <span className={styles.title}>Todo</span>
+            <div className={styles.wrap}>
+                <InputItem />
+                <ItemList items = {items}/>
+                <div className={styles.button_wrap}>
+                    <button className={styles.allTasks + ' ' + styles.button}>All Tasks: {3}</button>
+                    <button className={styles.incomplete + ' ' + styles.button}>Incomplete: {1}</button>
+                    <button className={styles.complete + ' ' + styles.button}>Complete: {2}</button>
                 </div>
+            </div>
             </body>
-        </html>
+            </html>
         );
-};
+    }
+}
 
 export default App;
