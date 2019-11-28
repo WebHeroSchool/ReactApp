@@ -1,0 +1,9 @@
+.item {
+    color: #3f51b5;
+    margin: 0 0 0 15px;
+}
+
+.done {
+   opacity: .7;
+    color: slategrey;
+}
