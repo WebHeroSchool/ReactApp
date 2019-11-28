@@ -6,12 +6,15 @@ import styles from './App.module.css';
 import classnames from 'classnames';
 
 class App extends React.Component {
-    render () {
-        const items = [
+    state = {
+        items: [
             {value: 'Learn from the React module', isDone: true},
             {value: 'Hug cat', isDone: true},
             {value: 'To drink tea!', isDone: false}
-        ];
+        ]
+    };
+
+    render() {
 
         return (
             <html>
@@ -19,7 +22,7 @@ class App extends React.Component {
             <span className={styles.title}>Todo</span>
             <div className={styles.wrap}>
                 <InputItem />
-                <ItemList items = {items}/>
+                <ItemList items = {this.state.items}/>
                 <div className={styles.button_wrap}>
                     <button className={styles.allTasks + ' ' + styles.button}>All Tasks: {3}</button>
                     <button className={styles.incomplete + ' ' + styles.button}>Incomplete: {1}</button>
