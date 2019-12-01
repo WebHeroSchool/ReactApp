@@ -8,13 +8,34 @@ import classnames from 'classnames';
 class App extends React.Component {
     state = {
         items: [
-            {value: 'Learn from the React module', isDone: true},
-            {value: 'Hug cat', isDone: true},
-            {value: 'To drink tea!', isDone: false}
+                {
+                    value: 'Learn from the React module',
+                    isDone: true,
+                    id: 1,
+                },
+                {
+                    value: 'Hug cat',
+                    isDone: true,
+                    id: 2,
+                },
+                {
+                    value: 'To drink tea!',
+                    isDone: false,
+                    id: 3,
+                }
         ]
     };
 
-    onClickDone = isDone => console.log(isDone);
+    onClickDone = id => {
+        const newItemList = this.state.items.map(item => {
+            const newItem = { ...item };
+            if (item.id === id) {
+                    newItem.isDone = !item.isDone;
+                }
+            return newItem;
+        });
+        this.setState({ items: newItemList});
+    };
 
     render() {
         return (
