@@ -37,6 +37,14 @@ class App extends React.Component {
         this.setState({ items: newItemList});
     };
 
+    onClickDelete = id => {
+        const newItemList = this.state.items.filter(item => {
+            return item.id != id;
+        });
+
+        this.setState({ items: newItemList });
+    };
+
     render() {
         return (
             <html>
@@ -44,7 +52,9 @@ class App extends React.Component {
             <span className={styles.title}>Todo</span>
             <div className={styles.wrap}>
                 <InputItem />
-                <ItemList items = {this.state.items} onClickDone={this.onClickDone} />
+                <ItemList items = {this.state.items}
+                          onClickDone={this.onClickDone}
+                          onClickDelete={this.onClickDelete}/>
                 <div className={styles.button_wrap}>
                     <button className={styles.allTasks + ' ' + styles.button}>All Tasks: {3}</button>
                     <button className={styles.incomplete + ' ' + styles.button}>Incomplete: {1}</button>

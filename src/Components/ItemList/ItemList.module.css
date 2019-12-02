@@ -6,18 +6,18 @@
     position: relative;
 }
 
-.items::after {
-    content: '';
-    background: url(./Image/delete.svg) no-repeat center;
-    background-size: cover;
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    right: 15px;
-    top: 4px;
-    cursor: pointer;
-    border: 2px solid transparent;
-}
+/*.items::after {*/
+/*    content: '';*/
+/*    background: url(./Image/delete.svg) no-repeat center;*/
+/*    background-size: cover;*/
+/*    width: 25px;*/
+/*    height: 25px;*/
+/*    position: absolute;*/
+/*    right: 15px;*/
+/*    top: 4px;*/
+/*    cursor: pointer;*/
+/*    border: 2px solid transparent;*/
+/*}*/
 
 .items:hover:after {
     padding: 1px;

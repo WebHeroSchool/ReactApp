@@ -1,21 +1,18 @@
 import React from 'react';
 import Item from "../Item/Item";
 import classnames from 'classnames';
-import styles from './ItemList.module.css'
+import styles from './ItemList.module.css';
 
-
-
-const ItemList = ({ items, onClickDone }) => (<nav><ul>
+const ItemList = ({ items, onClickDone, onClickDelete }) => (<nav><ul>
     {items.map( item =>  <li key ={item.value} className={styles.items}>
         <Item value = { item.value }
               isDone ={ item.isDone }
+              id = {item.id}
               onClickDone={onClickDone}
-              id = {item.id} />
+              onClickDelete={onClickDelete}
+        />
     </li>)}
 </ul></nav>);
 
-
-
-
-export default ItemList
+export default ItemList;
 
