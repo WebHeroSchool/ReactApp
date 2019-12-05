@@ -16,7 +16,7 @@ const style = {
 };
 
 const Item = ( {value, isDone, classes, onClickDone, id, onClickDelete} ) => (
-    <ListItem fullWidth>
+    <ListItem fullWidth className={styles.item}>
             <Checkbox
                 checked={ isDone }
                 tabIndex={-1}

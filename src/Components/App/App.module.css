@@ -22,7 +22,7 @@
 }
 
 html {
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .body {
@@ -50,8 +50,9 @@ html {
     font-family: 'Source Sans Pro';
     font-weight: 900;
     margin: 0;
-    width: 600px;
-    height: 350px;
+    width: 60%;
+    min-height: 50%;
+    max-height: 90%;
     background-color: white;
     border: 1px solid white;
     border-radius: 7px;
@@ -62,10 +63,10 @@ html {
 
 
 .button_wrap {
+    margin: 10px;
     display: flex;
     flex-direction: row;
-    align-self: center;
-    margin: 10px;
+    justify-content: center;
 }
 
 .button {
