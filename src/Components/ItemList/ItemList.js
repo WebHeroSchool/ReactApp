@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Item from "../Item/Item";
 import classnames from 'classnames';
 import styles from './ItemList.module.css';
@@ -13,6 +14,19 @@ const ItemList = ({ items, onClickDone, onClickDelete }) => (<nav><ul>
         />
     </li>)}
 </ul></nav>);
+
+ItemList.defaultProps = {
+    value: 'Our goal is to conquer the world!',
+    isDone: true,
+};
+
+ItemList.propTypes = {
+    isDone: PropTypes.bool,
+    value: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
+};
 
 export default ItemList;
 
