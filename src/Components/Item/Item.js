@@ -34,4 +34,10 @@ const Item = ( {value, isDone, classes, onClickDone, id, onClickDelete} ) => (
         </ListItemSecondaryAction>
     </ListItem>);
 
+Item.defaultProps = {
+
+    value: 'Our goal is to conquer the world!',
+
+};
+
 export default withStyles(style)(Item);
