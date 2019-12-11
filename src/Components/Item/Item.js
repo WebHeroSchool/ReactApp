@@ -16,24 +16,40 @@ const style = {
     }
 };
 
-const Item = ( {value, isDone, classes, onClickDone, id, onClickDelete} ) => (
-    <ListItem fullWidth className={styles.item}>
-            <Checkbox
-                checked={ isDone }
-                tabIndex={-1}
-                onClick={() => onClickDone(id)}
-            />
-        <ListItemText primary={value} classes={{
-            root: isDone && classes.done
-        }} />
-        <ListItemSecondaryAction>
-            <IconButton aria-label="Comments">
-                <DeleteIcon
-                    onClick={() => onClickDelete(id)}
-                />
-            </IconButton>
-        </ListItemSecondaryAction>
-    </ListItem>);
+class Item extends React.Component {
+  componentDidMount() {
+    console.log('componentDidMount');
+  };
+
+  componentDidUpdate() {
+    console.log('componentDidUpdate');
+  };
+
+  componentWillUnmount() {
+    console.log('componentWillUnmount');
+  }
+
+  render() {
+            const {value, isDone, classes, onClickDone, id, onClickDelete} = this.props;
+            return ( <ListItem fullWidth className={styles.item}>
+                  <Checkbox
+                      checked={ isDone }
+                      tabIndex={-1}
+                      onClick={() => onClickDone(id)}
+                  />
+                  <ListItemText primary={value} classes={{
+                    root: isDone && classes.done
+                  }} />
+                  <ListItemSecondaryAction>
+                    <IconButton aria-label="Comments">
+                      <DeleteIcon
+                          onClick={() => onClickDelete(id)}
+                      />
+                    </IconButton>
+                  </ListItemSecondaryAction>
+            </ListItem>);}
+}
+
 
 Item.defaultProps = {
     value: 'Our goal is to conquer the world!',

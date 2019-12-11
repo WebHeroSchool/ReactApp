@@ -7,6 +7,18 @@ import styles from './InputItem.module.css';
 
 
 class InputItem extends React.Component {
+    componentDidMount() {
+        console.log('componentDidMount in InputItem');
+    };
+
+    componentDidUpdate() {
+        console.log('componentDidUpdate in InputItem');
+    };
+
+    componentWillUnmount() {
+        console.log('componentWillUnmount in InputItem');
+    }
+
     state = {
         inputValue: '',
         inputError: false,
