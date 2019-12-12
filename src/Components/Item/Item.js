@@ -18,16 +18,12 @@ const style = {
 
 class Item extends React.Component {
   componentDidMount() {
-    console.log('componentDidMount');
-  };
-
-  componentDidUpdate() {
-    console.log('componentDidUpdate');
+    this.timerID = setInterval(() => console.log('createComponent'), 1000);
   };
 
   componentWillUnmount() {
-    console.log('componentWillUnmount');
-  }
+    clearInterval(this.timerID);
+  };
 
   render() {
             const {value, isDone, classes, onClickDone, id, onClickDelete} = this.props;

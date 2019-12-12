@@ -18,11 +18,11 @@ class App extends React.Component {
                     isDone: true,
                     id: 2,
                 },
-                {
-                    value: 'To drink tea!',
-                    isDone: false,
-                    id: 3,
-                }
+                // {
+                //     value: 'To drink tea!',
+                //     isDone: false,
+                //     id: 3,
+                // }
         ],
         count: 3
     };
