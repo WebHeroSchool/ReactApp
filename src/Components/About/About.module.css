@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('./Fonts/SourceSansPro-Black.ttf');
+  src: url('./Fonts/SourceSansPro-Bold.ttf');
+  src: url('./Fonts/SourceSansPro-ExtraLight.ttf');
+  font-weight: inherit;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./Fonts/Quicksand-Light.ttf');
+  src: url('./Fonts/Quicksand-Medium.ttf');
+  src: url('./Fonts/Quicksand-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.wrap {
+
+}
+
+.user {
+  display: flex;
+  margin: 0 15px 15px 0;
+}
+
+.info {
+  margin: 0 15px 0 15px;
+  font-family: 'Quicksand';
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+}
+
+.title, .subtitle {
+  display: flex;
+  font-size: 25px;
+  justify-content: center;
+  margin: 5px 0 0 0;
+}
+
+.link {
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  margin: 5px 0 0 15px;
+  text-decoration: none;
+}
+
+.error {
+}
+
+
+.avatar {
+  width: 30%;
+  height: 30%;
+}
+
+.container {
+  height: 90%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.repo {
+  list-style: none;
+  margin: 0;
+}
+
+.repo li {
+  margin: 10px 0;
+  position: relative;
+}
+
+.repo a {
+  width: 100%;
+  color: #808285;
+  text-decoration: none;
+  border-left: 6px solid #ABC7EA;
+  display: block;
+  padding-left: 25px;
+  height: 44px;
+  line-height: 44px;
+  font-size: 20px;
+  position: relative;
+  transition: 0.2s linear;
+}
+
+.repo a:before {
+  content: "";
+  width: 6px;
+  height: 70%;
+  background: #EE997C;
+  position: absolute;
+  top: 15%;
+  left: -12px;
+}
+
+.repo li:before {
+  content: "";
+  width: 6px;
+  height: 40%;
+  background: #EFDD89;
+  position: absolute;
+  top: 30%;
+  left: -12px;
+}
+
+.repo a:hover {
+  background: #D4D8D9;
+}

@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('./Fonts/SourceSansPro-Black.ttf');
+  src: url('./Fonts/SourceSansPro-Bold.ttf');
+  src: url('./Fonts/SourceSansPro-ExtraLight.ttf');
+  font-weight: inherit;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./Fonts/Quicksand-Light.ttf');
+  src: url('./Fonts/Quicksand-Medium.ttf');
+  src: url('./Fonts/Quicksand-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.wrap {
+  font-family: 'Source Sans Pro';
+  font-weight: 900;
+  margin: 0;
+  min-height: 60%;
+  max-height: 90%;
+  /*background-color: white;*/
+  /*border: 1px solid white;*/
+  /*border-radius: 7px;*/
+  /*box-shadow: 0 20px 30px rgba(0,0,0,0.30), 0 10px 10px rgba(0,0,0,0.25);*/
+  display: flex;
+  flex-direction: column;
+}
+
+
+.button_wrap {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button {
+  margin: 10px 10px 0 0;
+  width: 180px;
+  height: 25px;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  border-bottom: 2px solid transparent;
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: .9;
+  border-bottom: 2px double lightgray;
+}
+.allTasks {
+  background-color: #f3d796;
+}
+
+.incomplete {
+  background-color: #A64542;
+}
+
+.complete {
+  background-color: cadetblue;
+}
+
+@media (max-width: 670px) {
+  .wrap {
+    width: 450px;
+  }
+  .button {
+    width: 130px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    width: 350px;
+    height: 320px;
+  }
+  .button {
+    width: 80px;
+    font-size: 12px;
+  }
+}
