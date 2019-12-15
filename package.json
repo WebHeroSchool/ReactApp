@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@octokit/rest": "^16.35.2",
     "fast-glob": "latest",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
